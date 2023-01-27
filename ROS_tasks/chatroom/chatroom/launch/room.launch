@@ -1,0 +1,5 @@
+<launch>
+<node pkg="chatroom" type="talker1" name="User1" ></node>
+<node pkg="chatroom" type="talker2" name="User2" ></node>
+<node pkg="chatroom" type="talker3" name="User3" ></node>
+</launch>
