@@ -18,7 +18,7 @@ ros::Publisher cmd_vel;
 geometry_msgs::Twist velmsg;
 
 double calcdistance(double lat1, double lon1, double lat2, double lon2) {
-   const double earth_radius = 6371000.0; // meters
+   const double earth_radius = 6371000.0; 
    double d_lat = (lat2 - lat1) * M_PI / 180.0;
    double d_lon = (lon2 - lon1) * M_PI / 180.0;
    double a = pow(sin(d_lat/2), 2) + cos(lat1 * M_PI / 180.0) * cos(lat2 * M_PI / 180.0) * pow(sin(d_lon/2), 2);
@@ -30,8 +30,6 @@ void gpscallback(const sensor_msgs::NavSatFix::ConstPtr& msg) {
 gpsrn = *msg;
 }
 
-
-// Callback function for the IMU subscriber
 void imucallback(const sensor_msgs::Imu::ConstPtr& msg) {
 imurn = *msg;
 }
