@@ -81,20 +81,25 @@ int main(int argc, char **argv) {
     double remainingdistance = calcdistance(gpsrn.latitude, gpsrn.longitude, destlat, destlong);
     angularerror= calcheading(headingrn);
     std::cout<<"ANGULAR ERROR IS "<<angularerror<<"\n";
-    if(remainingdistance<1){
+    if(remainingdistance<0.7){
         velmsg.linear.x=0.0;
         velmsg.angular.z=0;
         std::cout<<"REACHED";
 
     }
-    else if(angularerror>0.1 || angularerror<-0.1)
-    {
-        velmsg.angular.z= 0.8*abs(angularerror);
+    else if(angularerror>0.07 || angularerror<-0.07)
+    {   if(angularerror>0){
+        velmsg.angular.z= 0.3*abs(angularerror);
+        velmsg.linear.x=0.0;}
+        else{
+            
+        velmsg.angular.z= -0.5*abs(angularerror);
         velmsg.linear.x=0.0;
+        }
     }
     else{
         velmsg.angular.z=0;
-        velmsg.linear.x=0.25;
+        velmsg.linear.x=0.2*remainingdistance;
     }
 
     
