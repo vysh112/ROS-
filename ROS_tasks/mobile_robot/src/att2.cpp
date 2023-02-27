@@ -46,7 +46,7 @@ double calcheading(double headingrn){
 }
 
 
-double calcvelocity(double angularerror) {
+/* double calcvelocity(double angularerror) {
     double k = 10; // tuning constant for proportional control
     double velocity = 0;
     if (std::abs(angularerror) > 0.1) {
@@ -58,7 +58,7 @@ double calcvelocity(double angularerror) {
         }
     }
     return velocity;
-}
+} */
 
 int main(int argc, char **argv) {
 
