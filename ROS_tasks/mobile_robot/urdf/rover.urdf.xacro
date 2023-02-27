@@ -353,7 +353,7 @@
       <serviceName>imu_service</serviceName>
       <gaussianNoise>0.0</gaussianNoise>
       <frameName>imu_link</frameName>
-      <updateRate>20.0</updateRate>
+      <updateRate>50.0</updateRate>
     </plugin>
   </gazebo>
 

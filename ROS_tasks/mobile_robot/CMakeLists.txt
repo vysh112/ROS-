@@ -204,9 +204,9 @@ include_directories(
 # catkin_add_nosetests(test)
 
 
-add_executable(att2 src/att2.cpp)
-target_link_libraries(att2 ${catkin_LIBRARIES})
-add_dependencies(att2 mobile_robot_generate_messages_cpp)
+add_executable(att src/att.cpp)
+target_link_libraries(att ${catkin_LIBRARIES})
+add_dependencies(att mobile_robot_generate_messages_cpp)
 
 add_executable(att2 src/att2.cpp)
 target_link_libraries(att2 ${catkin_LIBRARIES})
