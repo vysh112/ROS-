@@ -211,3 +211,7 @@ add_dependencies(attwithoa mobile_robot_generate_messages_cpp)
 add_executable(att2 src/att2.cpp)
 target_link_libraries(att2 ${catkin_LIBRARIES})
 add_dependencies(att2 mobile_robot_generate_messages_cpp)
+
+add_executable(oaatt src/oaatt.cpp)
+target_link_libraries(oaatt ${catkin_LIBRARIES})
+add_dependencies(oaatt mobile_robot_generate_messages_cpp)
