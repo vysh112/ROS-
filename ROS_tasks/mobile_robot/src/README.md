@@ -1,4 +1,9 @@
 # PCL TASK
+
+## Task Description
+
+Obstacle Avoidance using Pointcloud data from the kinect on the 4 wheel bot integrating it with GPS based Autonomous traversal. Obstacles visualisation on RViz.
+
 ## PCL Overview
 
 The code subscribes to the /kinect/depth/points topic, which provides the input point cloud data from a Kinect sensor. The cloudCallback function is called whenever a new point cloud message is received.
